@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:contentDescription="@string/shortWetsuit"
+    tools:context=".DressToSailActivity">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="206dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginBottom="604dp"
+        android:contentDescription="@string/logodesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_logosmall" />
+
+    <ImageButton
+        android:id="@+id/backButton3"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="40dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/backbutton"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toStartOf="@id/imageView15"
+        app:srcCompat="@drawable/ic_baseline_navigate_before_24"
+        app:tint="@color/black"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="410dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="410dp"
+        android:layout_height="161dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/scrollgallery"
+        android:outlineProvider="paddedBounds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/selectWinterHat"
+                android:layout_width="118dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/winterHat"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/winter_hat" />
+
+            <ImageButton
+                android:id="@+id/selectSunCream"
+                android:layout_width="118dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/sunCream"
+                android:cropToPadding="false"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/sun_cream"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/selectSunHat"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/sunHat"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/summer_hat"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/selectShortWetsuit"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/shortWetsuit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/short_wetsuit"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/selectLongWetsuit"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/longWetsuit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/long_wetsuit" />
+
+            <ImageButton
+                android:id="@+id/selectBouyancy"
+                android:layout_width="118dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/bouyancy"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bouyancy_aid" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="145dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/arvo_bold"
+        android:text="@string/weatherTitle"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/sunHat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="188dp"
+        android:layout_height="439dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/blankman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDressHome"
+        app:srcCompat="@drawable/man_basic" />
+
+    <ImageView
+        android:id="@+id/sunHat"
+        android:layout_width="155dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/sunHat"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDressHome"
+        app:srcCompat="@drawable/summer_hat" />
+
+    <ImageView
+        android:id="@+id/longWetsuit"
+        android:layout_width="163dp"
+        android:layout_height="271dp"
+        android:layout_marginTop="152dp"
+        android:contentDescription="@string/longWetsuit"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:srcCompat="@drawable/long_wetsuit" />
+
+    <ImageView
+        android:id="@+id/shortWetsuit"
+        android:layout_width="134dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="144dp"
+        android:contentDescription="@string/shortWetsuit"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:srcCompat="@drawable/short_wetsuit" />
+
+    <ImageView
+        android:id="@+id/bouyancyAid"
+        android:layout_width="139dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="144dp"
+        android:contentDescription="@string/bouyancy"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:srcCompat="@drawable/bouyancy_aid" />
+
+    <ImageView
+        android:id="@+id/winterHat"
+        android:layout_width="149dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/winterHat"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sunHat"
+        app:srcCompat="@drawable/winter_hat" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/suncreamR"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="13dp"
+        android:contentDescription="@string/sunCream"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/suncreamL"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winterHat"
+        app:srcCompat="@drawable/ic_baseline_minimize_24" />
+
+    <ImageView
+        android:id="@+id/suncreamL"
+        android:layout_width="43dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="144dp"
+        android:contentDescription="@string/sunCream"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/suncreamR"
+        app:layout_constraintTop_toBottomOf="@+id/winterHat"
+        app:srcCompat="@drawable/ic_baseline_minimize_24" />
+
+    <Button
+        android:id="@+id/btnReady"
+        android:layout_width="127dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#FB9058"
+        android:ellipsize="none"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/ready"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnDressHome"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="124dp"
+        android:background="#003C2727"
+        android:contentDescription="@string/homebtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/arvo_bold"
+        android:text="@string/weatherToday"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/suncreamR"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

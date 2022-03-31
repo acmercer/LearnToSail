@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context=".LearnBoatParts">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="206dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginBottom="604dp"
+        android:contentDescription="@string/logodesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_logosmall" />
+
+    <ImageButton
+        android:id="@+id/btnBoatBack2"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="44dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/design"
+        android:scaleType="fitCenter"
+        android:scrollbarThumbHorizontal="@drawable/ic_backbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:srcCompat="@drawable/ic_baseline_navigate_before_24"
+        app:tint="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/btnBoatHome2"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="124dp"
+        android:background="#003C2727"
+        android:contentDescription="@string/homebtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#000000"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <ImageView
+        android:id="@+id/boatDesign2"
+        android:layout_width="381dp"
+        android:layout_height="538dp"
+        android:contentDescription="@string/boatparts"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        app:srcCompat="@drawable/boat" />
+
+    <ImageButton
+        android:id="@+id/btnMainsail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="236dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/btnHull"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="456dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnDaggerBoard"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="504dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnJib"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="320dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnRudder"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="472dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnMast"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnMainSheet"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="396dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnBoom"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="376dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnJibSheet"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="376dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnKicker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="388dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnTiller"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="396dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnPainter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="356dp"
+        android:layout_marginTop="436dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/btnMainHalyard"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/viewInfo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/boatDesign2"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="@+id/boatDesign2"
+        app:layout_constraintTop_toTopOf="@+id/boatDesign2"
+        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+        app:tint="#000000" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="171dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/arvo_bold"
+        android:text="@string/learnInfo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBoatHome2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
