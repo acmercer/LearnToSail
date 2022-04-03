@@ -37,13 +37,6 @@ public class LearnBoatParts extends AppCompatActivity {
             PopUpClass popUpClass = new PopUpClass();
             popUpClass.showPopupWindow(v, title,descript);
         });
-        ImageButton forestay = findViewById(R.id.btnForestay);
-        forestay.setOnClickListener(v -> {
-            String title = (getResources().getString(R.string.forestayTitle));
-            String descript = getResources().getString(R.string.forestayDesc);
-            PopUpClass popUpClass = new PopUpClass();
-            popUpClass.showPopupWindow(v, title,descript);
-        });
         ImageButton jibsheet = findViewById(R.id.btnJibSheet);
         jibsheet.setOnClickListener(v -> {
             String title = (getResources().getString(R.string.jibsheetTitle));

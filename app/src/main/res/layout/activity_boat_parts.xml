@@ -7,16 +7,31 @@
     android:background="@drawable/ic_background"
     tools:context=".BoatParts">
 
+    <ImageButton
+        android:id="@+id/btnBoatHome3"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="124dp"
+        android:background="#003C2727"
+        android:contentDescription="@string/homebtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#000000"
+        tools:ignore="RedundantDescriptionCheck" />
+
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="0dp"
         android:layout_height="151dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginBottom="608dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginBottom="604dp"
         android:contentDescription="@string/logodesc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/choice_1"
+        app:layout_constraintStart_toEndOf="@+id/halyardBlank"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_logosmall" />
 
@@ -25,7 +40,7 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_marginEnd="168dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="44dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/design"
@@ -67,8 +82,141 @@
         app:layout_constraintVertical_bias="0.31"
         app:srcCompat="@drawable/boat" />
 
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boatDesign">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tillerLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/tillerTitle" />
+
+            <TextView
+                android:id="@+id/rudderLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/rudderTitle" />
+
+            <TextView
+                android:id="@+id/boomLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/boomTitle" />
+
+            <TextView
+                android:id="@+id/painterLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/painterTitle" />
+
+            <TextView
+                android:id="@+id/mainsheetLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/mainTitle" />
+
+            <TextView
+                android:id="@+id/jibsheetLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/jibsheetTitle" />
+
+            <TextView
+                android:id="@+id/kickerLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/kickerTitle" />
+
+            <TextView
+                android:id="@+id/daggerLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/daggerTitle" />
+
+            <TextView
+                android:id="@+id/hullLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/hullTitle" />
+
+            <TextView
+                android:id="@+id/jibLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/jibTitle" />
+
+            <TextView
+                android:id="@+id/mastLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/mastTitle" />
+
+            <TextView
+                android:id="@+id/mainLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/mainSailTitle" />
+
+            <TextView
+                android:id="@+id/halyardLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/labeldrag"
+                android:gravity="center"
+                android:text="@string/halyardTitle" />
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
-        android:id="@+id/choice_1"
+        android:id="@+id/halyardBlank"
         android:layout_width="138dp"
         android:layout_height="24dp"
         android:layout_marginStart="132dp"
