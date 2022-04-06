@@ -2,6 +2,7 @@ package com.example.learntosail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -25,6 +26,8 @@ public class BoatParts extends AppCompatActivity {
         back.setOnClickListener(v -> back());
         ImageButton home = findViewById(R.id.btnBoatHome);
         home.setOnClickListener(v -> home());
+        ImageButton reset = findViewById(R.id.btnReset);
+        reset.setOnClickListener(v -> restart());
 
         //Blank spots for labels
         halyardBlank = findViewById(R.id.halyardBlank); halyardBlank.setOnDragListener(new LabelDragListener()); halyardBlank.setOnTouchListener(new LabelTouchListener());
@@ -64,6 +67,9 @@ public class BoatParts extends AppCompatActivity {
         Intent intent2 = new Intent(this, HomeScreen.class);
         startActivity(intent2);
     }
+    public void restart() {
+        recreate();
+    }
     private final class LabelTouchListener implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent motionEvent){
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
@@ -82,7 +88,7 @@ public class BoatParts extends AppCompatActivity {
         @Override
         public boolean onDrag(View v, DragEvent event){
             //Handle drag events
-            switch (event.getAction()){
+            switch (event.getAction()) {
                 case DragEvent.ACTION_DRAG_STARTED:
                 case DragEvent.ACTION_DRAG_ENTERED:
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -94,25 +100,26 @@ public class BoatParts extends AppCompatActivity {
                     View view = (View) event.getLocalState();
                     TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
+                    String dropID = view.getResources().getResourceEntryName(view.getId());
+                    String endID = view.getResources().getResourceEntryName(view.getId());
                     dropTarget.setText(dropped.getText());
                     dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
-                    String endID = view.getResources().getResourceEntryName(view.getId());
-                    if (endID.contains("Label")){
-                        view.setVisibility(View.GONE);
-                    }
-                    else {
-                        dropped.setText("");
-                    }
-                    //view.setVisibility(View.INVISIBLE);
+                    if (dropID.contains("Blank")) {
+                        if (endID.contains("Label")) {
+                            view.setVisibility(View.GONE);
+                        } else {
+                            dropped.setText("");
+                        }
+                        //view.setVisibility(View.INVISIBLE);
 
-                    Object tag = dropTarget.getTag();
+                        Object tag = dropTarget.getTag();
 
-                    if(tag!=null)
-                    {
-                        //the tag is the view id already dropped here
-                        int existingID = (Integer)tag;
-                        //set the original view visible again
-                        findViewById(existingID).setVisibility(View.VISIBLE);
+                        if (tag != null) {
+                            //the tag is the view id already dropped here
+                            int existingID = (Integer) tag;
+                            //set the original view visible again
+                            findViewById(existingID).setVisibility(View.VISIBLE);
+                        }
                     }
             }
             return true;

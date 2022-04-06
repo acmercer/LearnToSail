@@ -84,4 +84,5 @@
     <string name="bluerope">Blue</string>
     <string name="purpleRope">Purple</string>
     <string name="orangerope">Orange</string>
+    <string name="winddirection">Click on which of the following can be used to find the wind direction</string>
 </resources>
