@@ -8,39 +8,49 @@
     android:background="@drawable/ic_background">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnOption2"
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginStart="216dp"
+        android:contentDescription="@string/picture2"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="252dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btnOption4"
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginStart="216dp"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/picture4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="429dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnOption2"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnOption1"
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="@string/picture1"
+        app:layout_constraintEnd_toStartOf="@+id/btnOption2"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="252dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnOption3"
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginStart="28dp"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/picture3"
+        app:layout_constraintEnd_toStartOf="@+id/btnOption4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="429dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnOption1"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
