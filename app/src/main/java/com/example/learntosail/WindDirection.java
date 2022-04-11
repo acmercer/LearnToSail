@@ -3,6 +3,7 @@ package com.example.learntosail;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 public class WindDirection extends AppCompatActivity {
@@ -18,8 +19,10 @@ public class WindDirection extends AppCompatActivity {
         imgOp2 = findViewById(R.id.btnOption2);
         imgOp3 = findViewById(R.id.btnOption3);
         imgOp4 = findViewById(R.id.btnOption4);
+        imgOp1.setOnClickListener(v -> wrong());
     }
-    public void question1() {
+    public void wrong() {
+        //Code to alert the choice was wrong
 
     }
 }

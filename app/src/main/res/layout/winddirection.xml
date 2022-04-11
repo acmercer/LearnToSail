@@ -12,10 +12,11 @@
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginStart="216dp"
+        android:background="@mipmap/ic_rubberduck_foreground"
         android:contentDescription="@string/picture2"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageButton
         android:id="@+id/btnOption4"
@@ -23,10 +24,12 @@
         android:layout_height="158dp"
         android:layout_marginStart="216dp"
         android:layout_marginTop="19dp"
+        android:background="@color/white"
         android:contentDescription="@string/picture4"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_windsock_foreground"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOption2"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintTop_toBottomOf="@+id/btnOption2" />
 
     <ImageButton
         android:id="@+id/btnOption1"
@@ -34,11 +37,13 @@
         android:layout_height="158dp"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="30dp"
+        android:background="@color/white"
         android:contentDescription="@string/picture1"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_windmill_foreground"
         app:layout_constraintEnd_toStartOf="@+id/btnOption2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageButton
         android:id="@+id/btnOption3"
@@ -46,12 +51,14 @@
         android:layout_height="158dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="19dp"
+        android:background="@color/white"
         android:contentDescription="@string/picture3"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_whoopie_foreground"
         app:layout_constraintEnd_toStartOf="@+id/btnOption4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOption1"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintTop_toBottomOf="@+id/btnOption1" />
 
     <TextView
         android:id="@+id/textView10"
