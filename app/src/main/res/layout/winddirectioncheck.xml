@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheck"
         android:layout_width="316dp"
         android:layout_height="238dp"
         android:layout_marginTop="180dp"
@@ -15,7 +16,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#FFE0F3FF">
 
             <ImageView
                 android:id="@+id/imgCheckIcon"
