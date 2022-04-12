@@ -53,28 +53,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="426dp"
-        android:layout_height="588dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="403dp"
+        android:layout_height="220dp"
         android:contentDescription="@string/banner"
-        app:layout_constraintBottom_toTopOf="@+id/btnPointsofSail"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:srcCompat="@drawable/ic_banner" />
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_paint_foreground" />
 
     <ImageButton
         android:id="@+id/btnTopic2Home"
         style="@android:style/Widget.ImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
         android:background="#003C2727"
         android:contentDescription="@string/homebtn"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/backButton2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/backButton2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_home_24"
         app:tint="#000000"
         tools:ignore="RedundantDescriptionCheck" />
@@ -151,15 +149,12 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="86dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/arvo_bold"
         android:text="@string/onthewater"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -176,27 +171,23 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="206dp"
-        android:layout_height="151dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginBottom="604dp"
+        android:layout_width="135dp"
+        android:layout_height="110dp"
         android:contentDescription="@string/logodesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_logosmall" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_smallerlogo_foreground" />
 
     <ImageButton
         android:id="@+id/backButton2"
         android:layout_width="92dp"
         android:layout_height="92dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="28dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/backbutton"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_navigate_before_24"
         app:tint="@color/black"
         tools:ignore="RedundantDescriptionCheck" />
