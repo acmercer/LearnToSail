@@ -10,14 +10,13 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="206dp"
-        android:layout_height="151dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginBottom="604dp"
+        android:layout_width="135dp"
+        android:layout_height="110dp"
         android:contentDescription="@string/logodesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_logosmall" />
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_smallerlogo_foreground" />
 
     <ImageButton
         android:id="@+id/backButton3"
@@ -37,7 +36,7 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="410dp"
+        android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
@@ -46,7 +45,7 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="410dp"
+        android:layout_width="wrap_content"
         android:layout_height="161dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/scrollgallery"
@@ -279,12 +278,12 @@
         style="@android:style/Widget.ImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginStart="72dp"
         android:background="#003C2727"
         android:contentDescription="@string/homebtn"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/backButton3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/backButton3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_home_24"

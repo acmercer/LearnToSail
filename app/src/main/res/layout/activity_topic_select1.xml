@@ -10,68 +10,65 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="511dp"
-        android:layout_height="294dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="403dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/design"
-        app:layout_constraintBottom_toBottomOf="@+id/btnWeather"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:srcCompat="@drawable/ic_banner" />
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_paint_foreground" />
 
     <ImageButton
         android:id="@+id/backbutton"
         android:layout_width="92dp"
         android:layout_height="92dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="44dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/design"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
         android:scrollbarThumbHorizontal="@drawable/ic_backbutton"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_navigate_before_24"
         app:tint="@color/black"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="206dp"
-        android:layout_height="151dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginBottom="604dp"
+        android:layout_width="135dp"
+        android:layout_height="110dp"
         android:contentDescription="@string/logodesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_logosmall" />
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_smallerlogo_foreground" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="318dp"
         android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="92dp"
         android:fontFamily="@font/arvo_bold"
         android:outlineProvider="none"
         android:text="@string/Preparing"
         android:textColor="@color/white"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="146dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="122dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="140dp"
         android:contentDescription="@string/design"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@+id/btnRigging"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/ic_rope" />
 
@@ -80,38 +77,16 @@
         style="@android:style/Widget.ImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
         android:background="#003C2727"
         android:contentDescription="@string/homebtn"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/backbutton"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_home_24"
         app:tint="#000000"
         tools:ignore="RedundantDescriptionCheck" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="102dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="196dp"
-        android:contentDescription="@string/design"
-        app:layout_constraintEnd_toEndOf="@+id/btnBoatParts"
-        app:layout_constraintTop_toTopOf="@+id/imageView9"
-        app:srcCompat="@drawable/ic_smallboat" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="68dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="196dp"
-        android:contentDescription="@string/design"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/btnDressing"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bouyancy_aid" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -121,6 +96,7 @@
         android:layout_marginEnd="184dp"
         android:contentDescription="@string/design"
         app:layout_constraintEnd_toEndOf="@+id/btnSailPos"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView10"
         app:srcCompat="@drawable/ic_position" />
 
@@ -128,10 +104,12 @@
         android:id="@+id/imageView9"
         android:layout_width="86dp"
         android:layout_height="84dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="284dp"
         android:contentDescription="@string/design"
         app:layout_constraintEnd_toEndOf="@+id/btnWeather"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backbutton"
         app:srcCompat="@drawable/ic_weather" />
 
@@ -147,17 +125,14 @@
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/dressing"
         android:textAllCaps="false"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.305"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -165,29 +140,38 @@
         style="@android:style/Widget.Material.Light.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/weather"
         android:textAllCaps="false"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDressing" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="102dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="196dp"
+        android:contentDescription="@string/design"
+        app:layout_constraintEnd_toEndOf="@+id/btnBoatParts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:srcCompat="@drawable/ic_smallboat" />
 
     <Button
         android:id="@+id/btnBoatParts"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/boatparts"
         android:textAllCaps="false"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnWeather"
         app:layout_constraintTop_toBottomOf="@+id/btnWeather" />
 
     <Button
@@ -196,12 +180,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="120dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/position"
         android:textAllCaps="false"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnWeather"
         app:layout_constraintTop_toBottomOf="@+id/btnBoatParts" />
 
     <Button
@@ -209,13 +192,25 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="136dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/rigging"
         android:textAllCaps="false"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/btnSailPos" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="68dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:contentDescription="@string/design"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backbutton"
+        app:srcCompat="@drawable/bouyancy_aid" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
