@@ -100,11 +100,11 @@ public class BoatParts extends AppCompatActivity {
                     View view = (View) event.getLocalState();
                     TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
-                    String dropID = view.getResources().getResourceEntryName(view.getId());
+                    String dropID = v.getResources().getResourceEntryName(v.getId());
                     String endID = view.getResources().getResourceEntryName(view.getId());
                     dropTarget.setText(dropped.getText());
                     dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
-                    if (dropID.contains("Blank")) {
+                    //fix this please future Anna
                         if (endID.contains("Label")) {
                             view.setVisibility(View.GONE);
                         } else {
@@ -121,7 +121,7 @@ public class BoatParts extends AppCompatActivity {
                             findViewById(existingID).setVisibility(View.VISIBLE);
                         }
                     }
-            }
+
             return true;
         }
     }
