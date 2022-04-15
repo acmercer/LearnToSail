@@ -101,25 +101,34 @@ public class BoatParts extends AppCompatActivity {
                     TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
                     String dropID = v.getResources().getResourceEntryName(v.getId());
-                    String endID = view.getResources().getResourceEntryName(view.getId());
+                    String moveID = view.getResources().getResourceEntryName(view.getId());
                     dropTarget.setText(dropped.getText());
                     dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
                     //fix this please future Anna
-                        if (endID.contains("Label")) {
-                            view.setVisibility(View.GONE);
-                        } else {
-                            dropped.setText("");
-                        }
+                    if (dropID.contains("Label")){
+                        view.setVisibility(View.GONE);
+                    }
+                    Object tag = dropTarget.getTag();
+
+                    if (tag!= null){
+                        int existingID = (Integer) tag;
+                        findViewById(existingID).setVisibility(View.VISIBLE);
+                    }
+                        //if (endID.contains("Label")) {
+                          //  view.setVisibility(View.GONE);
+                        //} else {
+                          //  dropped.setText("");
+                        //}
                         //view.setVisibility(View.INVISIBLE);
 
-                        Object tag = dropTarget.getTag();
+                        //Object tag = dropTarget.getTag();
 
-                        if (tag != null) {
+                        //if (tag != null) {
                             //the tag is the view id already dropped here
-                            int existingID = (Integer) tag;
+                          //  int existingID = (Integer) tag;
                             //set the original view visible again
-                            findViewById(existingID).setVisibility(View.VISIBLE);
-                        }
+                            //findViewById(existingID).setVisibility(View.VISIBLE);
+                        //}
                     }
 
             return true;
