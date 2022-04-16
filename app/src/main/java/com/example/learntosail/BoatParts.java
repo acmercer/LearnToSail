@@ -98,22 +98,23 @@ public class BoatParts extends AppCompatActivity {
                 case DragEvent.ACTION_DROP:
                     //Handle dragged view being dropped over a drop view
                     View view = (View) event.getLocalState();
-                    TextView dropTarget = (TextView) v;
+                    TextView dropTarget = (TextView) view;
                     TextView dropped = (TextView) view;
                     String dropID = v.getResources().getResourceEntryName(v.getId());
                     String moveID = view.getResources().getResourceEntryName(view.getId());
                     dropTarget.setText(dropped.getText());
                     dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
                     //fix this please future Anna
-                    if (dropID.contains("Label")){
+                    if (dropID.contains("Blank") && moveID.contains("Label")){
                         view.setVisibility(View.GONE);
                     }
-                    Object tag = dropTarget.getTag();
 
-                    if (tag!= null){
-                        int existingID = (Integer) tag;
-                        findViewById(existingID).setVisibility(View.VISIBLE);
-                    }
+                    Object tag = dropTarget.getTag();
+                        if (tag!= null){
+                            int existingID = (Integer) tag;
+                            findViewById(existingID).setVisibility(View.VISIBLE);
+                        }
+
                         //if (endID.contains("Label")) {
                           //  view.setVisibility(View.GONE);
                         //} else {
