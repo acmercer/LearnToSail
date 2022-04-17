@@ -7,14 +7,6 @@
     android:background="@drawable/ic_background"
     tools:context=".LearnPointsOfSail">
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="403dp"
-        android:layout_height="418dp"
-        app:srcCompat="@mipmap/ic_pointsofsail_foreground"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="168dp" />
-
     <ImageButton
         android:id="@+id/btnBoatHome4"
         style="@android:style/Widget.ImageButton"
@@ -61,6 +53,9 @@
         android:fontFamily="@font/roboto_slab"
         android:text="@string/windArrow"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="77dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnBoatHome4"
+        app:layout_constraintTop_toBottomOf="@+id/btnBoatHome4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

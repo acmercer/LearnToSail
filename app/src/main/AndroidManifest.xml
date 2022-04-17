@@ -16,6 +16,9 @@
             android:name=".GainSpeed"
             android:exported="false" />
         <activity
+            android:name=".LearnPointsOfSail"
+            android:exported="false" />
+        <activity
             android:name=".LearnBoatParts"
             android:exported="false" />
         <activity
