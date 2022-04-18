@@ -13,8 +13,8 @@ public class LearnPointsOfSail extends AppCompatActivity {
         setContentView(R.layout.activity_learn_points_of_sail);
         ImageButton closehaul = findViewById(R.id.btnCloseHaul);
         closehaul.setOnClickListener(v -> {
-            PopUpClass popUpClass = new PopUpClass();
-            popUpClass.showPopupWindow(v, "hi", "no");
+            PointsofsailPopUp popUp = new PointsofsailPopUp();
+            popUp.displayPopUp(v, "hi", "no");
         });
     }
 }
