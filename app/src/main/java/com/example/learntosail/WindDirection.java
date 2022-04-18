@@ -24,6 +24,7 @@ public class WindDirection extends AppCompatActivity {
             WindCheck popUpClass = new WindCheck();
             popUpClass.showWindPopup(v);
         });
+        ImageButton back
     }
     public void wrong() {
         //Code to alert the choice was wrong

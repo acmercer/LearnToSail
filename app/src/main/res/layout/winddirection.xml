@@ -7,59 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
 
-    <ImageButton
-        android:id="@+id/btnOption2"
-        android:layout_width="158dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="216dp"
-        android:background="@mipmap/ic_rubberduck_foreground"
-        android:contentDescription="@string/picture2"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <ImageButton
-        android:id="@+id/btnOption4"
-        android:layout_width="158dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="19dp"
-        android:background="@color/white"
-        android:contentDescription="@string/picture4"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/ic_windsock_foreground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOption2" />
-
-    <ImageButton
-        android:id="@+id/btnOption1"
-        android:layout_width="158dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="30dp"
-        android:background="@color/white"
-        android:contentDescription="@string/picture1"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/ic_windmill_foreground"
-        app:layout_constraintEnd_toStartOf="@+id/btnOption2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <ImageButton
-        android:id="@+id/btnOption3"
-        android:layout_width="158dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="19dp"
-        android:background="@color/white"
-        android:contentDescription="@string/picture3"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/ic_whoopie_foreground"
-        app:layout_constraintEnd_toStartOf="@+id/btnOption4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOption1" />
-
     <TextView
         android:id="@+id/textView10"
         android:layout_width="320dp"
@@ -75,7 +22,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView20" />
 
     <ImageButton
-        android:id="@+id/btnBoatBack4"
+        android:id="@+id/btnWeatherBack"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:adjustViewBounds="true"
@@ -99,7 +46,7 @@
         app:srcCompat="@mipmap/ic_smallerlogo_foreground" />
 
     <ImageButton
-        android:id="@+id/btnBoatHome5"
+        android:id="@+id/btnWeatherHome"
         style="@android:style/Widget.ImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -113,5 +60,74 @@
         app:srcCompat="@drawable/ic_baseline_home_24"
         app:tint="#000000"
         tools:ignore="RedundantDescriptionCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="130dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnOption2"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@mipmap/ic_rubberduck_foreground"
+                android:contentDescription="@string/picture2"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnOption4"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/white"
+                android:contentDescription="@string/picture4"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_windsock_foreground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnOption1"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:contentDescription="@string/picture1"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_windmill_foreground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnOption3"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/white"
+                android:contentDescription="@string/picture3"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_whoopie_foreground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

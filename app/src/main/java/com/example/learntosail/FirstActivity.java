@@ -27,6 +27,11 @@ public class FirstActivity extends AppCompatActivity {
     btnBoatParts.setOnClickListener(v -> showPopupWindow(v));
     ImageButton home = findViewById(R.id.btnTopic1Home);
     home.setOnClickListener(v -> home());
+    Button btnWeather = findViewById(R.id.btnWeather);
+    btnWeather.setOnClickListener(V -> {
+        Intent weather = new Intent(this,WindDirection.class);
+        startActivity(weather);
+    });
 }
     public void goBack(){
         Intent intent1 = new Intent(this, HomeScreen.class);
