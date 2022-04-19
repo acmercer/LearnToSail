@@ -15,7 +15,27 @@ public class LearnPointsOfSail extends AppCompatActivity {
         ImageButton closehaul = findViewById(R.id.btnCloseHaul);
         closehaul.setOnClickListener(v -> {
             PointsofsailPopUp popUp = new PointsofsailPopUp();
-            popUp.displayPopUp(v, getResources().getString(R.string.closeHaulTitle), getResources().getString(R.string.closeHaulText));
+            popUp.displayPopUp(v, getResources().getString(R.string.closeHaulTitle), getResources().getString(R.string.closeHaulText), getResources().getDrawable(R.mipmap.ic_closehaul_foreground));
+        });
+        ImageButton beamReach = findViewById(R.id.btnBeamReach);
+        beamReach.setOnClickListener(v -> {
+            PointsofsailPopUp popUp = new PointsofsailPopUp();
+            popUp.displayPopUp(v, getResources().getString(R.string.beamReachTitle), getResources().getString(R.string.beamReachText), getResources().getDrawable(R.mipmap.ic_beamreach_foreground));
+        });
+        ImageButton broadReach = findViewById(R.id.btnBroadReach);
+        broadReach.setOnClickListener(v -> {
+            PointsofsailPopUp popUp = new PointsofsailPopUp();
+            popUp.displayPopUp(v, getResources().getString(R.string.broadReachTitle), getResources().getString(R.string.broadReachText), getResources().getDrawable(R.mipmap.ic_broadreach_foreground));
+        });
+        ImageButton trainingRun = findViewById(R.id.btnTrainingRun);
+        trainingRun.setOnClickListener(v -> {
+            PointsofsailPopUp popUp = new PointsofsailPopUp();
+            popUp.displayPopUp(v, getResources().getString(R.string.trainingRunTitle), getResources().getString(R.string.trainingRunText), getResources().getDrawable(R.mipmap.ic_trainingrun_foreground));
+        });
+        ImageButton deadRun = findViewById(R.id.btnDeadRun);
+        deadRun.setOnClickListener(v -> {
+            PointsofsailPopUp popUp = new PointsofsailPopUp();
+            popUp.displayPopUp(v, getResources().getString(R.string.deadRunTitle), getResources().getString(R.string.deadRunText), getResources().getDrawable(R.mipmap.ic_deadrun_foreground));
         });
         ImageButton back = findViewById(R.id.btnWeatherBack);
         back.setOnClickListener(v ->{
