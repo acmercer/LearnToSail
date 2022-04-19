@@ -2,6 +2,7 @@ package com.example.learntosail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -24,7 +25,16 @@ public class WindDirection extends AppCompatActivity {
             WindCheck popUpClass = new WindCheck();
             popUpClass.showWindPopup(v);
         });
-        ImageButton back
+        ImageButton back = findViewById(R.id.btnWeatherBack);
+        back.setOnClickListener(v ->{
+            Intent backbtn = new Intent(this, FirstActivity.class);
+            startActivity(backbtn);
+        });
+        ImageButton home = findViewById(R.id.btnWeatherHome);
+        home.setOnClickListener(v -> {
+            Intent homebtn = new Intent(this, HomeScreen.class);
+            startActivity(homebtn);
+        });
     }
     public void wrong() {
         //Code to alert the choice was wrong

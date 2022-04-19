@@ -8,7 +8,7 @@
     tools:context=".LearnPointsOfSail">
 
     <ImageButton
-        android:id="@+id/btnBoatHome4"
+        android:id="@+id/btnPosHome"
         style="@android:style/Widget.ImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -34,7 +34,7 @@
         app:srcCompat="@mipmap/ic_paint_foreground" />
 
     <ImageButton
-        android:id="@+id/btnBoatBack3"
+        android:id="@+id/btnPosBack"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:adjustViewBounds="true"
@@ -68,7 +68,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBoatHome4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPosHome" />
 
     <ImageView
         android:id="@+id/imageView23"
