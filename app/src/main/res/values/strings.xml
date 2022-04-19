@@ -97,7 +97,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="windArrow">Wind direction</string>
@@ -107,4 +106,16 @@
     <string name="trainingRun">Training Run Info</string>
     <string name="deadRun">Dead Run Info</string>
     <string name="closeHaulTitle">Close Haul</string>
+    <string name="closeHaulText">Your sail should be all the way in and the wind is coming from almost in front of you.</string>
+    <string name="beamReachTitle">Beam Reach</string>
+    <string name="beamReachText">The sail should be half way out and the boat is at 90 degrees to the wind. Fastest point of sail!</string>
+    <string name="broadReachTitle">Broad Reach</string>
+    <string name="broadReachText">Sail a little more than half way out. Wind is slightly behind you.</string>
+    <string name="trainingRunTitle">Training Run</string>
+    <string name="trainingRunText">Sail is all the way out and the wind is almost directly behind you.</string>
+    <string name="deadRunTitle">Dead Run</string>
+    <string name="deadRunText">You should avoid going on a dead run as it is very easy to accidentally gybe which is dangerous as the boom moves very quickly!</string>
+    <string name="noGoZone">No Go Zone</string>
+    <string name="noGoZoneText">You can\'t sail directly into the wind so the sail will be flapping in the middle of the boat and you may even drift backwards!</string>
+
 </resources>

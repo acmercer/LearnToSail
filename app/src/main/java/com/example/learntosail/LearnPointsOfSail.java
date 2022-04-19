@@ -15,7 +15,7 @@ public class LearnPointsOfSail extends AppCompatActivity {
         ImageButton closehaul = findViewById(R.id.btnCloseHaul);
         closehaul.setOnClickListener(v -> {
             PointsofsailPopUp popUp = new PointsofsailPopUp();
-            popUp.displayPopUp(v, "Close Haul", "At this point of sail you want to pull your sail all the way in.");
+            popUp.displayPopUp(v, getResources().getString(R.string.closeHaulTitle), getResources().getString(R.string.closeHaulText));
         });
         ImageButton back = findViewById(R.id.btnWeatherBack);
         back.setOnClickListener(v ->{
