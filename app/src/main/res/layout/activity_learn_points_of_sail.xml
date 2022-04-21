@@ -26,11 +26,13 @@
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="403dp"
-        android:layout_height="237dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imgPos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/ic_paint_foreground" />
 
     <ImageButton
@@ -71,16 +73,30 @@
         app:layout_constraintTop_toBottomOf="@+id/btnPosHome" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/imgPos"
         android:layout_width="414dp"
         android:layout_height="430dp"
         android:layout_marginTop="56dp"
         android:background="@mipmap/ic_pointsofsail_foreground"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageButton
+        android:id="@+id/btnNoGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="12dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/closeHaul"
+        android:paddingStart="35dp"
+        android:paddingTop="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageView
         android:id="@+id/imageView24"
@@ -97,83 +113,78 @@
         android:id="@+id/btnCloseHaul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="321dp"
+        android:layout_marginTop="72dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/closeHaul"
         android:paddingStart="35dp"
         android:paddingTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageButton
         android:id="@+id/btnBeamReach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_marginStart="349dp"
+        android:layout_marginTop="195dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/beamReach"
         android:paddingStart="35dp"
         android:paddingTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.988"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageButton
         android:id="@+id/btnBroadReach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="301dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/broadReach"
         android:paddingStart="20dp"
         android:paddingTop="35dp"
         android:paddingEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageButton
         android:id="@+id/btnTrainingRun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="356dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/trainingRun"
         android:paddingStart="40dp"
         android:paddingTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageButton
         android:id="@+id/btnDeadRun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="368dp"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="380dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/deadRun"
         android:paddingStart="35dp"
         android:paddingTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imgPos"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <TextView
         android:id="@+id/txtPosTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/arvo_bold"
         android:text="@string/pointsofsail"
         android:textColor="#FFFFFF"

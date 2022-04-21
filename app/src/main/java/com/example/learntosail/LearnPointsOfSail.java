@@ -3,6 +3,7 @@ package com.example.learntosail;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -12,10 +13,14 @@ public class LearnPointsOfSail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_points_of_sail);
+
         ImageButton closehaul = findViewById(R.id.btnCloseHaul);
         closehaul.setOnClickListener(v -> {
+            String title = getResources().getString(R.string.closeHaulTitle);
+            String text = getResources().getString(R.string.closeHaulText);
+            Drawable image = getResources().getDrawable(R.mipmap.ic_closehaul_foreground);
             PointsofsailPopUp popUp = new PointsofsailPopUp();
-            popUp.displayPopUp(v, getResources().getString(R.string.closeHaulTitle), getResources().getString(R.string.closeHaulText), getResources().getDrawable(R.mipmap.ic_closehaul_foreground));
+            popUp.displayPopUp(v, title, text, image);
         });
         ImageButton beamReach = findViewById(R.id.btnBeamReach);
         beamReach.setOnClickListener(v -> {
@@ -37,12 +42,12 @@ public class LearnPointsOfSail extends AppCompatActivity {
             PointsofsailPopUp popUp = new PointsofsailPopUp();
             popUp.displayPopUp(v, getResources().getString(R.string.deadRunTitle), getResources().getString(R.string.deadRunText), getResources().getDrawable(R.mipmap.ic_deadrun_foreground));
         });
-        ImageButton back = findViewById(R.id.btnWeatherBack);
+        ImageButton back = findViewById(R.id.btnPosBack);
         back.setOnClickListener(v ->{
             Intent backbtn = new Intent(this, FirstActivity.class);
             startActivity(backbtn);
         });
-        ImageButton home = findViewById(R.id.btnWeatherHome);
+        ImageButton home = findViewById(R.id.btnPosHome);
         home.setOnClickListener(v -> {
             Intent homebtn = new Intent(this, HomeScreen.class);
             startActivity(homebtn);

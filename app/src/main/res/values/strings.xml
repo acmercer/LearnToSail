@@ -114,8 +114,8 @@
     <string name="trainingRunTitle">Training Run</string>
     <string name="trainingRunText">Sail is all the way out and the wind is almost directly behind you.</string>
     <string name="deadRunTitle">Dead Run</string>
-    <string name="deadRunText">You should avoid going on a dead run as it is very easy to accidentally gybe which is dangerous as the boom moves very quickly!</string>
+    <string name="deadRunText">You should avoid going on a dead run as it\'s very easy to accidentally gybe and the boom moves very quickly!</string>
     <string name="noGoZone">No Go Zone</string>
-    <string name="noGoZoneText">You can\'t sail directly into the wind so the sail will be flapping in the middle of the boat and you may even drift backwards!</string>
+    <string name="noGoZoneText">You can\'t sail directly into the wind, sail will be flapping in the middle and you may even drift backwards!</string>
 
 </resources>

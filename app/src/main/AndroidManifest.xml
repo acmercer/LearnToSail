@@ -17,7 +17,13 @@
             android:exported="false" />
         <activity
             android:name=".LearnPointsOfSail"
-            android:exported="false" />
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="package.LearnPointsOfSail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LearnBoatParts"
             android:exported="false" />

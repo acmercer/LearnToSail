@@ -18,14 +18,16 @@ public class PointsofsailPopUp {
         int height = LinearLayout.LayoutParams.MATCH_PARENT;
 
         boolean focusable = true;
-        TextView popTitle = view.findViewById(R.id.txtPointofsailTitle);
-        popTitle.setText(title);
-        TextView popText = view.findViewById(R.id.txtPointofsailText);
-        popText.setText(text);
-        ImageView popImg = view.findViewById(R.id.imgBoat);
-        popImg.setBackground(img);
         final PopupWindow popupWindow = new PopupWindow(popupView, width,height,focusable);
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        TextView popTitle = popupView.findViewById(R.id.txtPointofsailTitle);
+        popTitle.setText(title);
+        TextView popText = popupView.findViewById(R.id.txtPointofsailText);
+        popText.setText(text);
+        ImageView popImg = popupView.findViewById(R.id.imgBoat);
+        popImg.setBackground(img);
+
         popupView.setOnTouchListener((v, event) -> {
             popupWindow.dismiss();
             return true;
