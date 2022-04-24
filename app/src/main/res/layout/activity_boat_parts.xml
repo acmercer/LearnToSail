@@ -71,10 +71,10 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
+        app:layout_constraintVertical_bias="0.311"
         app:srcCompat="@drawable/boat" />
 
     <ScrollView
@@ -215,7 +215,7 @@
     <TextView
         android:id="@+id/halyardBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginStart="132dp"
         android:background="@drawable/blanklabel"
         android:gravity="center"
@@ -226,7 +226,7 @@
     <TextView
         android:id="@+id/mainBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="308dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/blanklabel"
@@ -238,7 +238,7 @@
     <TextView
         android:id="@+id/mastBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/blanklabel"
@@ -250,7 +250,7 @@
     <TextView
         android:id="@+id/jibBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="304dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/blanklabel"
@@ -262,7 +262,7 @@
     <TextView
         android:id="@+id/hullBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="452dp"
         android:layout_marginEnd="156dp"
         android:background="@drawable/blanklabel"
@@ -274,7 +274,7 @@
     <TextView
         android:id="@+id/daggerBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="512dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/blanklabel"
@@ -286,7 +286,7 @@
     <TextView
         android:id="@+id/kickerBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="96dp"
         android:background="@drawable/blanklabel"
@@ -331,7 +331,7 @@
     <TextView
         android:id="@+id/mainsheetBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="64dp"
         android:background="@drawable/blanklabel"
@@ -355,9 +355,9 @@
     <TextView
         android:id="@+id/jibsheetBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="128dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginEnd="200dp"
         android:background="@drawable/blanklabel"
         android:gravity="center"
         android:text=""
@@ -367,7 +367,7 @@
     <TextView
         android:id="@+id/painterBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="444dp"
         android:background="@drawable/blanklabel"
         android:gravity="center"
@@ -378,7 +378,7 @@
     <TextView
         android:id="@+id/boomBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="188dp"
         android:background="@drawable/blanklabel"
@@ -390,7 +390,7 @@
     <TextView
         android:id="@+id/rudderBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_marginTop="492dp"
         android:layout_marginEnd="260dp"
         android:background="@drawable/blanklabel"
@@ -402,9 +402,9 @@
     <TextView
         android:id="@+id/tillerBlank"
         android:layout_width="138dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="228dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="224dp"
         android:background="@drawable/blanklabel"
         android:gravity="center"
         android:text=""

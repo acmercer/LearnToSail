@@ -98,22 +98,32 @@ public class BoatParts extends AppCompatActivity {
                 case DragEvent.ACTION_DROP:
                     //Handle dragged view being dropped over a drop view
                     View view = (View) event.getLocalState();
-                    TextView dropTarget = (TextView) view;
+                    TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
                     String dropID = v.getResources().getResourceEntryName(v.getId());
                     String moveID = view.getResources().getResourceEntryName(view.getId());
-                    dropTarget.setText(dropped.getText());
-                    dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
-                    //fix this please future Anna
+                //    Object tag = dropTarget.getTag();
+                //    if (tag!= null){
+                //        int existingID = (Integer) tag;
+                //        findViewById(existingID).setVisibility(View.VISIBLE);
+                //    }
+                    //TODO fix this please future Anna
                     if (dropID.contains("Blank") && moveID.contains("Label")){
-                        view.setVisibility(View.GONE);
+                            dropTarget.setText(dropped.getText());
+                            dropped.setVisibility(View.GONE);
+                            String replaceText = (String) dropTarget.getText();
+                            dropTarget.setText(dropped.getText());
+                            dropped.setText(replaceText);
+                            System.out.print(dropped.getText());
+
+                    }
+                    else if (dropID.contains("Blank") && moveID.contains("Blank")){
+                        String replace =(String) dropTarget.getText();
+                        dropTarget.setText(dropped.getText());
+                        dropped.setText(replace);
                     }
 
-                    Object tag = dropTarget.getTag();
-                        if (tag!= null){
-                            int existingID = (Integer) tag;
-                            findViewById(existingID).setVisibility(View.VISIBLE);
-                        }
+
 
                         //if (endID.contains("Label")) {
                           //  view.setVisibility(View.GONE);
