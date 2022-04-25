@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".LearnFigureof8"
+            android:exported="false"
+            android:label="@string/title_activity_learn_figureof8"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
             android:name=".WindDirection"
             android:exported="false" />
         <activity
@@ -17,7 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".LearnPointsOfSail"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="package.LearnPointsOfSail" />
 

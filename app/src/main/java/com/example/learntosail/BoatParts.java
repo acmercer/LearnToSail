@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -20,8 +21,9 @@ public class BoatParts extends AppCompatActivity {
 
     private TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
 
-    String [] labelTexts = {""};
+    String [] labelTexts = {"Tiller","Rudder","The Boom","Painter","Main Sheet","Jib Sheet","Kicker","Daggerboard","The Hull","The Jib","The Mast","Mainsail","Main Halyard"};
 
+    TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,8 @@ public class BoatParts extends AppCompatActivity {
         home.setOnClickListener(v -> home());
         ImageButton reset = findViewById(R.id.btnReset);
         reset.setOnClickListener(v -> restart());
+        Button checkInput = findViewById(R.id.btnCheckBoatParts);
+        checkInput.setOnClickListener(v -> checkSelection());
 
         //Blank spots for labels
         halyardBlank = findViewById(R.id.halyardBlank); halyardBlank.setOnDragListener(new LabelDragListener()); halyardBlank.setOnTouchListener(new LabelTouchListener());
@@ -62,6 +66,8 @@ public class BoatParts extends AppCompatActivity {
         boomLabel = findViewById(R.id.boomLabel); boomLabel.setOnTouchListener(new LabelTouchListener()); boomLabel.setOnDragListener(new LabelDragListener());
         rudderLabel = findViewById(R.id.rudderLabel); rudderLabel.setOnTouchListener(new LabelTouchListener()); rudderLabel.setOnDragListener(new LabelDragListener());
         tillerLabel = findViewById(R.id.tillerLabel); tillerLabel.setOnTouchListener(new LabelTouchListener()); tillerLabel.setOnDragListener(new LabelDragListener());
+
+        //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
     }
     public void back(){
         Intent intent = new Intent(this, FirstActivity.class);
@@ -132,5 +138,9 @@ public class BoatParts extends AppCompatActivity {
     }
     public void checkSelection(){
         //TODO check whether it is correct
+        for (int i=0; i< labelId.length; i++){
+            //Run through tests
+            findViewById(R.id.imgCheckHal).setVisibility(View.VISIBLE);
+        }
     }
 }
