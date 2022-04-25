@@ -20,6 +20,8 @@ public class BoatParts extends AppCompatActivity {
 
     private TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
 
+    String [] labelTexts = {""};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,7 +100,7 @@ public class BoatParts extends AppCompatActivity {
                 default:
                     break;
                 case DragEvent.ACTION_DROP:
-                    //Handle dragged view being dropped over a drop view
+                    //Handle dragged label being dropped over a blank label
                     View view = (View) event.getLocalState();
                     TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
@@ -127,5 +129,8 @@ public class BoatParts extends AppCompatActivity {
 
             return true;
         }
+    }
+    public void checkSelection(){
+        //TODO check whether it is correct
     }
 }

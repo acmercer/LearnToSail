@@ -120,5 +120,6 @@
     <string name="goodjob">Good Job!</string>
     <string name="almostthere">Almost there...</string>
     <string name="notquite">Not quite!</string>
+    <string name="done">Done</string>
 
 </resources>
