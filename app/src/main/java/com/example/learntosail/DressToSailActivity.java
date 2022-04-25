@@ -111,16 +111,31 @@ public class DressToSailActivity extends AppCompatActivity {
     }
     public void DressToSailCheckSummer(){
         if(imgSunHat.getVisibility() == View.INVISIBLE){
-            //Text to suggest having a sun hat
+            String hatCheck = "It would be a good idea to wear a sunhat to keep your face shaded!";
+        }
+        else {
+            String hatCheck = "Good job the sunhat will help you see and keep the sun off your face!";
         }
         if ((imgShortWetsuit.getVisibility() == View.INVISIBLE) && (imgLongWetsuit.getVisibility() == View.INVISIBLE)){
-            //Text to highlight importance of a wetsuit
+            String wetsuits = "Even if it's sunny you should wear a wetsuit if possible, if you fall in you can get very cold without one!";
+        }
+        else if (imgShortWetsuit.getVisibility()== View.VISIBLE){
+            String wetsuits = "A short wetsuit is ideal for this weather! You'll stay warm if you fall in but won't get too hot in the sun.";
+        }
+        else {
+            String wetsuits = "If there's an option a short wetsuit is better so you don't get too warm. Or if it's really hot swim shorts and a top can be okay.";
         }
         if (imgBouyancy.getVisibility() == View.INVISIBLE){
-            //Text about always wearing a bouyancy aid
+            String bouyancy = "It's important to wear a bouyancy aid at all times when sailing!";
+        }
+        else {
+            String bouyancy = "Well done! Wearing a bouyancy aid is very important!";
         }
         if (imgsuncreamL.getVisibility() == View.INVISIBLE){
-            //Text about wearing suncream
+            String suncream = "When it's sunny you should always wear suncream as the sun reflects off the water making it easy to burn!";
+        }
+        else {
+            String suncream = "Suncream is always a good idea when it's sunny! Especially when near water as it's much easier to get burnt.";
         }
     }
 }
