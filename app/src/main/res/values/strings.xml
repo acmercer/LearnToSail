@@ -117,5 +117,8 @@
     <string name="deadRunText">You should avoid going on a dead run as it\'s very easy to accidentally gybe and the boom moves very quickly!</string>
     <string name="noGoZone">No Go Zone</string>
     <string name="noGoZoneText">You can\'t sail directly into the wind, sail will be flapping in the middle and you may even drift backwards!</string>
+    <string name="goodjob">Good Job!</string>
+    <string name="almostthere">Almost there...</string>
+    <string name="notquite">Not quite!</string>
 
 </resources>

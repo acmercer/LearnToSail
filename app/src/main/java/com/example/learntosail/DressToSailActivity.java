@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-// TODO Check selected clothing items and advise
+
 public class DressToSailActivity extends AppCompatActivity {
     ImageView imgSunHat, imgBouyancy, imgWinterHat, imgLongWetsuit, imgShortWetsuit, imgsuncreamL, imgsuncreamR;
     @Override
@@ -16,7 +16,13 @@ public class DressToSailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dress_to_sail);
         ImageButton back = findViewById(R.id.backButton3);
-        back.setOnClickListener(v -> goBack3());
+        back.setOnClickListener(v -> {
+            startActivity(new Intent(this, FirstActivity.class));
+        });
+        ImageButton home = findViewById(R.id.btnDressHome);
+        home.setOnClickListener(v -> {
+            startActivity(new Intent(this, HomeScreen.class));
+        });
         ImageButton sunHat = findViewById(R.id.selectSunHat);
         sunHat.setOnClickListener(v -> sunHat());
         imgSunHat = findViewById(R.id.sunHat);
@@ -38,17 +44,9 @@ public class DressToSailActivity extends AppCompatActivity {
         ImageButton suncream = findViewById(R.id.selectSunCream);
         suncream.setOnClickListener(v -> suncream());
         Button dressDone = findViewById(R.id.btnReady);
-        ImageButton home = findViewById(R.id.btnDressHome);
-        home.setOnClickListener(v -> dressHome());
+        dressDone.setOnClickListener(v -> DressToSailCheckSummer());
     }
-    public void dressHome(){
-        Intent intent2 = new Intent(this, HomeScreen.class);
-        startActivity(intent2);
-    }
-    public void goBack3(){
-        Intent intent = new Intent(this, FirstActivity.class);
-        startActivity(intent);
-    }
+
     public void sunHat(){
         if (imgSunHat.getVisibility() == View.INVISIBLE){
             if (imgWinterHat.getVisibility()==View.VISIBLE){
@@ -109,6 +107,20 @@ public class DressToSailActivity extends AppCompatActivity {
         else{
             imgsuncreamL.setVisibility(View.INVISIBLE);
             imgsuncreamR.setVisibility(View.INVISIBLE);
+        }
+    }
+    public void DressToSailCheckSummer(){
+        if(imgSunHat.getVisibility() == View.INVISIBLE){
+            //Text to suggest having a sun hat
+        }
+        if ((imgShortWetsuit.getVisibility() == View.INVISIBLE) && (imgLongWetsuit.getVisibility() == View.INVISIBLE)){
+            //Text to highlight importance of a wetsuit
+        }
+        if (imgBouyancy.getVisibility() == View.INVISIBLE){
+            //Text about always wearing a bouyancy aid
+        }
+        if (imgsuncreamL.getVisibility() == View.INVISIBLE){
+            //Text about wearing suncream
         }
     }
 }

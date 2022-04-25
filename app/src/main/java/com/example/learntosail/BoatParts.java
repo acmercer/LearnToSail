@@ -1,11 +1,13 @@
 package com.example.learntosail;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.MotionEvent;
@@ -100,46 +102,27 @@ public class BoatParts extends AppCompatActivity {
                     View view = (View) event.getLocalState();
                     TextView dropTarget = (TextView) v;
                     TextView dropped = (TextView) view;
-                    String dropID = v.getResources().getResourceEntryName(v.getId());
+                    //String dropID = v.getResources().getResourceEntryName(v.getId());
                     String moveID = view.getResources().getResourceEntryName(view.getId());
-                //    Object tag = dropTarget.getTag();
-                //    if (tag!= null){
-                //        int existingID = (Integer) tag;
-                //        findViewById(existingID).setVisibility(View.VISIBLE);
-                //    }
-                    //TODO fix this please future Anna
-                    if (dropID.contains("Blank") && moveID.contains("Label")){
-                            dropTarget.setText(dropped.getText());
-                            dropped.setVisibility(View.GONE);
-                            String replaceText = (String) dropTarget.getText();
-                            dropTarget.setText(dropped.getText());
-                            dropped.setText(replaceText);
-                            System.out.print(dropped.getText());
 
-                    }
-                    else if (dropID.contains("Blank") && moveID.contains("Blank")){
-                        String replace =(String) dropTarget.getText();
+                    Object tag = dropTarget.getTag();
+                    if (tag == null){
                         dropTarget.setText(dropped.getText());
-                        dropped.setText(replace);
+                        dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
                     }
-
-
-
-                        //if (endID.contains("Label")) {
-                          //  view.setVisibility(View.GONE);
-                        //} else {
-                          //  dropped.setText("");
-                        //}
-                        //view.setVisibility(View.INVISIBLE);
-
-                        //Object tag = dropTarget.getTag();
-
-                        //if (tag != null) {
-                            //the tag is the view id already dropped here
-                          //  int existingID = (Integer) tag;
-                            //set the original view visible again
-                            //findViewById(existingID).setVisibility(View.VISIBLE);
-                        //}
+                    else{
+                        int currentID = (Integer) tag;
+                        dropTarget.setText(dropped.getText());
+                        dropTarget.setTypeface(Typeface.DEFAULT_BOLD);
+                        findViewById(currentID).setVisibility(View.VISIBLE);
+                    }
+                    if (moveID.contains("Label")){
+                        dropped.setVisibility(View.GONE);
+                    }
+                    else{
+                        dropped.setText("");
+                    }
+                    dropTarget.setTag(dropped.getId());
                     }
 
             return true;
