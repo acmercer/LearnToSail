@@ -23,7 +23,7 @@ public class BoatParts extends AppCompatActivity {
 
     TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
     ImageView tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck;
-    String [] labelTexts = {"Tiller","Rudder","The Boom","Painter","Main Sheet","Jib Sheet","Kicker","Daggerboard","The Hull","The Jib","The Mast","Mainsail","Main Halyard"};
+    //String [] labelTexts = {"Tiller","Rudder","The Boom","Painter","Main Sheet","Jib Sheet","Kicker","Daggerboard","The Hull","The Jib","The Mast","Mainsail","Main Halyard"};
 
     //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
     //ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
@@ -161,10 +161,14 @@ public class BoatParts extends AppCompatActivity {
         //TODO check whether it is correct
         TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
         ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
+        String [] labelTexts = {getResources().getString(R.string.tillerTitle),getResources().getString(R.string.rudderTitle),getResources().getString(R.string.boomTitle),getResources().getString(R.string.painterTitle),getResources().getString(R.string.mainTitle),getResources().getString(R.string.jibsheetTitle),getResources().getString(R.string.kickerTitle),getResources().getString(R.string.daggerTitle),getResources().getString(R.string.hullTitle),getResources().getString(R.string.jibTitle),getResources().getString(R.string.mastTitle),getResources().getString(R.string.mainSailTitle),getResources().getString(R.string.halyardTitle)};
         int total =0;
         for (int i=0; i< labelId.length; i++){
             //Run through tests
-            if (labelId[i].getText() == labelTexts[i]){
+            String txtLabel = (String) labelId[i].getText();
+            //String stringName = labelTexts[i];
+            //String answer = getResources().getString(R.string.stringName);
+            if (txtLabel == labelTexts[i]){
                 checkId[i].setVisibility(View.VISIBLE);
                 total+=1;
             }
