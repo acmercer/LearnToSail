@@ -1,7 +1,5 @@
 package com.example.learntosail;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -14,12 +12,14 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class DressToSailActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class DressToSailActivityW extends AppCompatActivity {
     ImageView imgSunHat, imgBouyancy, imgWinterHat, imgLongWetsuit, imgShortWetsuit, imgsuncreamL, imgsuncreamR;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dress_to_sail);
+        setContentView(R.layout.activity_dress_to_sailW);
         ImageButton back = findViewById(R.id.backButtonW);
         back.setOnClickListener(v -> {
             startActivity(new Intent(this, FirstActivity.class));
@@ -37,7 +37,6 @@ public class DressToSailActivity extends AppCompatActivity {
         imgShortWetsuit = findViewById(R.id.shortWetsuitW);
         imgsuncreamL = findViewById(R.id.suncreamLW);
         imgsuncreamR = findViewById(R.id.suncreamRW);
-        ImageView[] imgs = {imgSunHat, imgBouyancy, imgWinterHat, imgLongWetsuit, imgShortWetsuit, imgsuncreamL, imgsuncreamR};
         ImageButton bouyancy = findViewById(R.id.selectBouyancyW);
         bouyancy.setOnClickListener(v -> bouyancy());
         ImageButton winter = findViewById(R.id.selectWinterHatW);
@@ -121,24 +120,25 @@ public class DressToSailActivity extends AppCompatActivity {
         String bouyancy = "";
         String suncream = "";
         if(imgWinterHat.getVisibility() == View.VISIBLE){
-            hatCheck = "You're going to get too hot in a winter hat!";
+            hatCheck = "The winter hat will keep your head nice and warm!";
+            count+=1;
         }
         else if (imgSunHat.getVisibility() == View.VISIBLE){
-            hatCheck = "Good job the sunhat will keep the sun off your face!";
-            count+=1;
+            hatCheck = "A sun hat won't be very effective at maintaining body heat.";
         }
         else {
-            hatCheck = "You should cover your head and face from the sun.";
+            hatCheck = "You should cover your head to keep in the warmth.";
         }
         if (imgLongWetsuit.getVisibility() == View.VISIBLE){
-            wetsuits = "If possible a short wetsuit instead or if it's really hot swim shorts and a top.";
-        }
-        else if (imgShortWetsuit.getVisibility()== View.VISIBLE){
-            wetsuits = "A short wetsuit is ideal for this weather!";
+            wetsuits = "A long wetsuit is the best for keeping you warm.";
             count+=1;
         }
+        else if (imgShortWetsuit.getVisibility()== View.VISIBLE){
+            wetsuits = "A short wetsuit isn't warm enough and leaves you exposed to the wind!";
+
+        }
         else {
-            wetsuits = "If you fall in you can still get cold without a wetsuit even when sunny.";
+            wetsuits = "Without a wetsuit you will be far too cold!";
         }
         if (imgBouyancy.getVisibility() == View.INVISIBLE){
             bouyancy = "Always wear a bouyancy aid when sailing!";
@@ -148,10 +148,11 @@ public class DressToSailActivity extends AppCompatActivity {
             count+=1;
         }
         if (imgsuncreamL.getVisibility() == View.INVISIBLE){
-            suncream = "Don't forget the sun reflects off the water making it easy to burn!";
+            suncream = "Suncream isn't needed when the suns not out";
+            count+=1;
         }
         else {
-            suncream = "Suncream is always a good idea when it's sunny!";
+            suncream = "Suncream is never a bad idea, even without sun you can get burnt!";
             count+=1;
         }
         if (count <= 1){

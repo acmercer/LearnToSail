@@ -124,5 +124,7 @@
     <string name="title_activity_learn_figureof8">LearnFigureof8</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="retry">Retry</string>
+    <string name="weatherRain">It\'s very windy, cloudy and cold!</string>
 
 </resources>

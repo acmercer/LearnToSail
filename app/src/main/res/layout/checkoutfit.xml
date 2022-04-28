@@ -30,13 +30,14 @@
 
             <TextView
                 android:id="@+id/txtTitleDress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="319dp"
+                android:layout_height="64dp"
                 android:layout_marginTop="44dp"
                 android:fontFamily="@font/arvo_bold"
                 android:text="@string/goodjob"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="48sp"
+                android:textSize="34sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,56 +45,100 @@
 
             <TextView
                 android:id="@+id/txtHead"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
-                android:text="TextView"
+                android:layout_width="230dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="28dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitleDress" />
 
             <TextView
                 android:id="@+id/txtFace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="29dp"
-                android:text="TextView"
+                android:layout_width="230dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtHead" />
 
             <TextView
                 android:id="@+id/txtBouyancy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:text="TextView"
+                android:layout_width="230dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtFace" />
 
             <TextView
                 android:id="@+id/txtWetsuit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="230dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtBouyancy" />
 
             <TextView
                 android:id="@+id/txtOthers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:text="TextView"
+                android:layout_width="230dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtWetsuit" />
+
+            <Button
+                android:id="@+id/btnRetry"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:background="#FB9058"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/retry"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.289"
+                app:layout_constraintStart_toStartOf="@+id/imageView21"
+                app:layout_constraintTop_toBottomOf="@+id/txtOthers" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:background="#52FB9058"
+                android:clickable="false"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView21"
+                app:layout_constraintHorizontal_bias="0.272"
+                app:layout_constraintStart_toEndOf="@+id/btnRetry"
+                app:layout_constraintTop_toBottomOf="@+id/txtOthers" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
