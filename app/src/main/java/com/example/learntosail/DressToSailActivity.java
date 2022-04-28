@@ -209,6 +209,10 @@ public class DressToSailActivity extends AppCompatActivity {
         retry.setOnClickListener(v -> {
             popupWindow.dismiss();
         });
+        next.setOnClickListener(v -> {
+            startActivity(new Intent(DressToSailActivity.this, DressToSailActivityW.class));
+            popupWindow.dismiss();
+        });
 
 
         //Handler for clicking on the inactive zone of the window

@@ -63,6 +63,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".DressToSailActivityW"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="package.DressToSailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".HomeScreen"
             android:exported="true">
             <intent-filter>

@@ -429,157 +429,144 @@
         android:id="@+id/imgCheckHal"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="@color/white"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/halyardBlank"
         app:layout_constraintEnd_toEndOf="@+id/halyardBlank"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/halyardBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/halyardBlank" />
 
     <ImageView
         android:id="@+id/imgCheckMast"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="@color/white"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/mastBlank"
         app:layout_constraintEnd_toEndOf="@+id/mastBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mastBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/mastBlank" />
 
     <ImageView
         android:id="@+id/imgCheckJSail"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/jibBlank"
         app:layout_constraintEnd_toEndOf="@+id/jibBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/jibBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/jibBlank" />
 
     <ImageView
         android:id="@+id/imgCheckTiller"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/tillerBlank"
         app:layout_constraintEnd_toEndOf="@+id/tillerBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/tillerBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/tillerBlank" />
 
     <ImageView
         android:id="@+id/imgCheckPainter"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/painterBlank"
         app:layout_constraintEnd_toEndOf="@+id/painterBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/painterBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/painterBlank" />
 
     <ImageView
         android:id="@+id/imgCheckDagger"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/daggerBlank"
         app:layout_constraintEnd_toEndOf="@+id/daggerBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/daggerBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/daggerBlank" />
 
     <ImageView
         android:id="@+id/imgCheckRudder"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/rudderBlank"
         app:layout_constraintEnd_toEndOf="@+id/rudderBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/rudderBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/rudderBlank" />
 
     <ImageView
         android:id="@+id/imgCheckHull"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/hullBlank"
         app:layout_constraintEnd_toEndOf="@+id/hullBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/hullBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/hullBlank" />
 
     <ImageView
         android:id="@+id/imgCheckBoom"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/boomBlank"
         app:layout_constraintEnd_toEndOf="@+id/boomBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/boomBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/boomBlank" />
 
     <ImageView
         android:id="@+id/imgCheckMSail"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/mainBlank"
         app:layout_constraintEnd_toEndOf="@+id/mainBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mainBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/mainBlank" />
 
     <ImageView
         android:id="@+id/imgCheckMSheet"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/mainsheetBlank"
         app:layout_constraintEnd_toEndOf="@+id/mainsheetBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/blueRope"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toEndOf="@+id/blueRope" />
 
     <ImageView
         android:id="@+id/imgCheckKicker"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/jibsheetBlank"
         app:layout_constraintEnd_toEndOf="@+id/kickerBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/kickerBlank"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toStartOf="@+id/kickerBlank" />
 
     <ImageView
         android:id="@+id/imgCheckJSheet"
         android:layout_width="28dp"
         android:layout_height="31dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/ic_correct"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/jibsheetBlank"
         app:layout_constraintEnd_toEndOf="@+id/jibsheetBlank"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/purpleRope"
-        app:srcCompat="@drawable/ic_correct" />
+        app:layout_constraintStart_toEndOf="@+id/purpleRope" />
 
     <Button
         android:id="@+id/btnCheckBoatParts"

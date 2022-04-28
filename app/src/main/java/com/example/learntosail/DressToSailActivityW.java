@@ -19,7 +19,7 @@ public class DressToSailActivityW extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dress_to_sailW);
+        setContentView(R.layout.activity_dress_to_sailw);
         ImageButton back = findViewById(R.id.backButtonW);
         back.setOnClickListener(v -> {
             startActivity(new Intent(this, FirstActivity.class));
@@ -195,6 +195,7 @@ public class DressToSailActivityW extends AppCompatActivity {
         TextView txtBouyancy = popupView.findViewById(R.id.txtBouyancy);
         Button retry = popupView.findViewById(R.id.btnRetry);
         Button next = popupView.findViewById(R.id.btnNext);
+        next.setText("Finish");
         if (count == 4){
             next.setClickable(true);
             next.setBackgroundColor(0xFFFB9058);
@@ -208,6 +209,10 @@ public class DressToSailActivityW extends AppCompatActivity {
         txtWetsuit.setText(wetsuits);
         txtBouyancy.setText(bouyancy);
         retry.setOnClickListener(v -> {
+            popupWindow.dismiss();
+        });
+        next.setOnClickListener(v -> {
+            startActivity(new Intent(DressToSailActivityW.this, FirstActivity.class));
             popupWindow.dismiss();
         });
 

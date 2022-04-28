@@ -2,6 +2,7 @@ package com.example.learntosail;
 
 import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -14,16 +15,18 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BoatParts extends AppCompatActivity {
 
 
-    private TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
-
+    TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
+    ImageView tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck;
     String [] labelTexts = {"Tiller","Rudder","The Boom","Painter","Main Sheet","Jib Sheet","Kicker","Daggerboard","The Hull","The Jib","The Mast","Mainsail","Main Halyard"};
 
-    TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
+    //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
+    //ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +70,26 @@ public class BoatParts extends AppCompatActivity {
         rudderLabel = findViewById(R.id.rudderLabel); rudderLabel.setOnTouchListener(new LabelTouchListener()); rudderLabel.setOnDragListener(new LabelDragListener());
         tillerLabel = findViewById(R.id.tillerLabel); tillerLabel.setOnTouchListener(new LabelTouchListener()); tillerLabel.setOnDragListener(new LabelDragListener());
 
+        //Check marks
+        tillerCheck = findViewById(R.id.imgCheckTiller);
+        rudderCheck = findViewById(R.id.imgCheckRudder);
+        boomCheck = findViewById(R.id.imgCheckBoom);
+        painterCheck = findViewById(R.id.imgCheckPainter);
+        mainsheetCheck = findViewById(R.id.imgCheckMSheet);
+        jibsheetCheck = findViewById(R.id.imgCheckJSheet);
+        kickerCheck = findViewById(R.id.imgCheckKicker);
+        daggerCheck = findViewById(R.id.imgCheckDagger);
+        hullCheck = findViewById(R.id.imgCheckHull);
+        jibCheck = findViewById(R.id.imgCheckJSail);
+        mastCheck = findViewById(R.id.imgCheckMast);
+        mainCheck = findViewById(R.id.imgCheckMSail);
+        halyardCheck = findViewById(R.id.imgCheckHal);
+
+
         //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
     }
+
+
     public void back(){
         Intent intent = new Intent(this, FirstActivity.class);
         startActivity(intent);
@@ -138,9 +159,19 @@ public class BoatParts extends AppCompatActivity {
     }
     public void checkSelection(){
         //TODO check whether it is correct
+        TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
+        ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
+        int total =0;
         for (int i=0; i< labelId.length; i++){
             //Run through tests
-            findViewById(R.id.imgCheckHal).setVisibility(View.VISIBLE);
+            if (labelId[i].getText() == labelTexts[i]){
+                checkId[i].setVisibility(View.VISIBLE);
+                total+=1;
+            }
+            else {
+                checkId[i].setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_incorrect));
+                checkId[i].setVisibility(View.VISIBLE);
+            }
         }
     }
 }
