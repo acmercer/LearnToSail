@@ -126,5 +126,6 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="retry">Retry</string>
     <string name="weatherRain">It\'s very windy, cloudy and cold!</string>
+    <string name="outof">/ 13</string>
 
 </resources>
