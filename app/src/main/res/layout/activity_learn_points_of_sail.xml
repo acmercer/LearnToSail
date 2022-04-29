@@ -23,18 +23,6 @@
         app:tint="#000000"
         tools:ignore="RedundantDescriptionCheck" />
 
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="403dp"
-        android:layout_height="0dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/imgPos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_paint_foreground" />
-
     <ImageButton
         android:id="@+id/btnPosBack"
         android:layout_width="92dp"
@@ -95,7 +83,7 @@
         android:paddingStart="35dp"
         android:paddingTop="35dp"
         app:layout_constraintStart_toStartOf="@+id/imgPos"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:layout_constraintTop_toTopOf="@+id/imgPos"
         app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <ImageView
@@ -187,10 +175,10 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/arvo_bold"
         android:text="@string/pointsofsail"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:layout_constraintStart_toStartOf="@+id/imageView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

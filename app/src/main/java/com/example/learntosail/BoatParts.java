@@ -11,11 +11,15 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.DragEvent;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class BoatParts extends AppCompatActivity {
@@ -23,10 +27,7 @@ public class BoatParts extends AppCompatActivity {
 
     TextView halyardBlank, halyardLabel, mainBlank, mainLabel, mastBlank, mastLabel, jibBlank, jibLabel, hullBlank, hullLabel, daggerBlank, daggerLabel, kickerBlank, kickerLabel, mainsheetBlank, mainsheetLabel, jibsheetBlank, jibsheetLabel, painterBlank, painterLabel, boomBlank, boomLabel, rudderBlank, rudderLabel, tillerBlank, tillerLabel;
     ImageView tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck;
-    //String [] labelTexts = {"Tiller","Rudder","The Boom","Painter","Main Sheet","Jib Sheet","Kicker","Daggerboard","The Hull","The Jib","The Mast","Mainsail","Main Halyard"};
 
-    //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
-    //ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class BoatParts extends AppCompatActivity {
         ImageButton reset = findViewById(R.id.btnReset);
         reset.setOnClickListener(v -> restart());
         Button checkInput = findViewById(R.id.btnCheckBoatParts);
-        checkInput.setOnClickListener(v -> checkSelection());
+        checkInput.setOnClickListener(v -> checkSelection(v));
 
         //Blank spots for labels
         halyardBlank = findViewById(R.id.halyardBlank); halyardBlank.setOnDragListener(new LabelDragListener()); halyardBlank.setOnTouchListener(new LabelTouchListener());
@@ -85,10 +86,7 @@ public class BoatParts extends AppCompatActivity {
         mainCheck = findViewById(R.id.imgCheckMSail);
         halyardCheck = findViewById(R.id.imgCheckHal);
 
-
-        //TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
     }
-
 
     public void back(){
         Intent intent = new Intent(this, FirstActivity.class);
@@ -115,6 +113,7 @@ public class BoatParts extends AppCompatActivity {
             }
         }
     }
+
     private class LabelDragListener implements View.OnDragListener {
         @Override
         public boolean onDrag(View v, DragEvent event){
@@ -157,17 +156,15 @@ public class BoatParts extends AppCompatActivity {
             return true;
         }
     }
-    public void checkSelection(){
-        //TODO check whether it is correct
+    public void checkSelection(View v){
+        //Check how many are correct and mark with either a tick or a cross
         TextView [] labelId = {tillerBlank, rudderBlank, boomBlank, painterBlank, mainsheetBlank, jibsheetBlank, kickerBlank, daggerBlank, hullBlank, jibBlank, mastBlank, mainBlank, halyardBlank};
         ImageView  [] checkId = {tillerCheck, rudderCheck, boomCheck, painterCheck, mainsheetCheck, jibsheetCheck, kickerCheck, daggerCheck, hullCheck, jibCheck, mastCheck, mainCheck, halyardCheck};
         String [] labelTexts = {getResources().getString(R.string.tillerTitle),getResources().getString(R.string.rudderTitle),getResources().getString(R.string.boomTitle),getResources().getString(R.string.painterTitle),getResources().getString(R.string.mainTitle),getResources().getString(R.string.jibsheetTitle),getResources().getString(R.string.kickerTitle),getResources().getString(R.string.daggerTitle),getResources().getString(R.string.hullTitle),getResources().getString(R.string.jibTitle),getResources().getString(R.string.mastTitle),getResources().getString(R.string.mainSailTitle),getResources().getString(R.string.halyardTitle)};
         int total =0;
         for (int i=0; i< labelId.length; i++){
-            //Run through tests
             String txtLabel = (String) labelId[i].getText();
-            //String stringName = labelTexts[i];
-            //String answer = getResources().getString(R.string.stringName);
+
             if (txtLabel == labelTexts[i]){
                 checkId[i].setVisibility(View.VISIBLE);
                 total+=1;
@@ -177,5 +174,39 @@ public class BoatParts extends AppCompatActivity {
                 checkId[i].setVisibility(View.VISIBLE);
             }
         }
+        showPopupWindow(v, total);
+    }
+    public void showPopupWindow(final View view, int total) {
+
+
+        LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
+        View popupView = inflater.inflate(R.layout.popup_score, null);
+        int width = LinearLayout.LayoutParams.MATCH_PARENT;
+        int height = LinearLayout.LayoutParams.MATCH_PARENT;
+
+        boolean focusable = true;
+        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        TextView score = popupView.findViewById(R.id.txtScore);
+        TextView message = popupView.findViewById(R.id.txtPrompt);
+        score.setText(Integer.toString(total));
+        String msg = "";
+
+        if (total < 5){ msg = "More practice"; }
+        else if (total<8){ msg = "Keep trying"; }
+        else if (total <11){ msg = "Good try!";}
+        else if (total <13){ msg = "Great job!";}
+        else { msg = "Perfect!";}
+
+        message.setText(msg);
+
+
+        popupView.setOnTouchListener((v, event) -> {
+
+            //Close the window when clicked
+            popupWindow.dismiss();
+            return true;
+        });
     }
 }

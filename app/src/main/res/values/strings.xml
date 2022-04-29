@@ -100,11 +100,11 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="windArrow">Wind direction</string>
-    <string name="closeHaul">Close Haul Info</string>
-    <string name="beamReach">Beam Reach Info</string>
-    <string name="broadReach">Broad Reach Info</string>
-    <string name="trainingRun">Training Run Info</string>
-    <string name="deadRun">Dead Run Info</string>
+    <string name="closeHauli">Close Haul Info</string>
+    <string name="beamReachi">Beam Reach Info</string>
+    <string name="broadReachi">Broad Reach Info</string>
+    <string name="trainingRuni">Training Run Info</string>
+    <string name="deadRuni">Dead Run Info</string>
     <string name="closeHaulTitle">Close Haul</string>
     <string name="closeHaulText">Your sail should be all the way in and the wind is coming from almost in front of you.</string>
     <string name="beamReachTitle">Beam Reach</string>
@@ -115,7 +115,7 @@
     <string name="trainingRunText">Sail is all the way out and the wind is almost directly behind you.</string>
     <string name="deadRunTitle">Dead Run</string>
     <string name="deadRunText">You should avoid going on a dead run as it\'s very easy to accidentally gybe and the boom moves very quickly!</string>
-    <string name="noGoZone">No Go Zone</string>
+    <string name="noGoZone">Head to wind</string>
     <string name="noGoZoneText">You can\'t sail directly into the wind, sail will be flapping in the middle and you may even drift backwards!</string>
     <string name="goodjob">Good Job!</string>
     <string name="almostthere">Almost there...</string>
@@ -127,5 +127,20 @@
     <string name="retry">Retry</string>
     <string name="weatherRain">It\'s very windy, cloudy and cold!</string>
     <string name="outof">/ 13</string>
+    <string name="greenRope">Green</string>
+    <string name="posTitle">Name the point of sail</string>
+    <string name="goingAway">Going away</string>
+    <string name="flappySail">Flappy sail</string>
+    <string name="beamHaul">Beam Haul</string>
+    <string name="broadHaul">Broad Haul</string>
+    <string name="deadReach">Dead Reach</string>
+    <string name="beamRun">Beam Run</string>
+    <string name="closeRun">Close Run</string>
+    <string name="trainingHaul">Training Haul</string>
+    <string name="trainingReach">Training Reach</string>
+    <string name="broadRun">Broad Run</string>
+    <string name="sailAway">Away from the wind</string>
+    <string name="facingWind">Facing the wind</string>
+    <string name="of6">of 6</string>
 
 </resources>

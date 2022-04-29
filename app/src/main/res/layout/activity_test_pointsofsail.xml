@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context=".TestPointsofsail">
+
+    <ImageButton
+        android:id="@+id/imgPrevious"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="#000000"
+        android:contentDescription="@string/backbutton"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOptionFour"
+        android:layout_width="129dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="116dp"
+        android:background="#FB9058"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/goingAway"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/btnOptionThree"
+        app:layout_constraintTop_toBottomOf="@+id/imgBoatPoS" />
+
+    <Button
+        android:id="@+id/btnOptionTwo"
+        android:layout_width="129dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:background="#FB9058"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/broadReachTitle"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/btnOptionOne"
+        app:layout_constraintTop_toBottomOf="@+id/imgBoatPoS" />
+
+    <Button
+        android:id="@+id/btnOptionOne"
+        android:layout_width="129dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#FB9058"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/closebtn"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBoatPoS" />
+
+    <Button
+        android:id="@+id/btnOptionThree"
+        android:layout_width="129dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="116dp"
+        android:background="#FB9058"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/trainingRunTitle"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBoatPoS" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="74dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/windArrow"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPoSTitle" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/backbutton"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_navigate_before_24"
+        app:tint="@color/black"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/btnTopic2Home2"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:background="#003C2727"
+        android:contentDescription="@string/homebtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#000000"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="135dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/logodesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_smallerlogo_foreground" />
+
+    <ImageView
+        android:id="@+id/imgBoatPoS"
+        android:layout_width="233dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:srcCompat="@mipmap/ic_broadreach_foreground" />
+
+    <TextView
+        android:id="@+id/txtPoSTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arvo_bold"
+        android:text="@string/posTitle"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <ImageButton
+        android:id="@+id/imgNext"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:background="@drawable/ic_baseline_arrow_forward_24"
+        android:backgroundTint="#000000"
+        android:contentDescription="@string/next"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/of6"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto_slab"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
