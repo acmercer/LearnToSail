@@ -47,26 +47,14 @@ public class FirstActivity extends AppCompatActivity {
     }
     public void showPopupWindow(final View view) {
 
-
-        //Create a View object yourself through inflater
         LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.activity_pop_up_choice, null);
-
-        //Specify the length and width through constants
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.MATCH_PARENT;
-
-        //Make Inactive Items Outside Of PopupWindow
         boolean focusable = true;
 
-        //Create a window with our parameters
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        //Set the location of the window on the screen
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-
-        //Initialize the elements of our window, install the handler
-
 
         Button learn = popupView.findViewById(R.id.btnLearn);
         learn.setOnClickListener(v -> {
@@ -79,13 +67,8 @@ public class FirstActivity extends AppCompatActivity {
             popupWindow.dismiss();
         });
 
-
-
-        //Handler for clicking on the inactive zone of the window
-
         popupView.setOnTouchListener((v, event) -> {
 
-            //Close the window when clicked
             popupWindow.dismiss();
             return true;
         });

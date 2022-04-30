@@ -4,15 +4,17 @@ public class QuestionPoS {
     private int qImage;
     private int answer;
     private int a1, a2, a3, a4;
+    private boolean correct;
 
-    public QuestionPoS(int qImage, int answer, int a1, int a2, int a3, int a4){
+    public QuestionPoS(int qImage, int answer, int a1, int a2, int a3, int a4, boolean correct){
         this.qImage = qImage; this.answer = answer;
         this.a1 =a1; this.a2 = a2; this.a3 = a3; this.a4 = a4;
+        this.correct = correct;
     }
-    public int getQuestion(){
+    public int getImage(){
         return qImage;
     }
-    public void setQuestion(int qImage){
+    public void setImage(int qImage){
         this.qImage = qImage;
     }
     public int rightAnswer(){
@@ -32,5 +34,11 @@ public class QuestionPoS {
     }
     public int option4(){
         return a4;
+    }
+    public boolean isCorrect() {
+        return correct;
+    }
+    public void setUserAns(boolean correct){
+        this.correct = correct;
     }
 }

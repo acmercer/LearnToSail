@@ -142,5 +142,12 @@
     <string name="sailAway">Away from the wind</string>
     <string name="facingWind">Facing the wind</string>
     <string name="of6">of 6</string>
-
+    <string name="ques1">Question 1</string>
+    <string name="ques2">Question 2</string>
+    <string name="ques3">Question 3</string>
+    <string name="ques4">Question 4</string>
+    <string name="ques5">Question 5</string>
+    <string name="ques6">Question 6</string>
+    <string name="correctans">Correct</string>
+    <string name="wrongans">Wrong</string>
 </resources>
