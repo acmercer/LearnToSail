@@ -167,26 +167,16 @@ public class DressToSailActivity extends AppCompatActivity {
     }
     public void displayResults(final View view, String title, String suncream, String bouyancy, String wetsuits, String hatCheck, int count) {
 
-
-        //Create a View object yourself through inflater
         LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.checkoutfit, null);
-
-        //Specify the length and width through constants
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.MATCH_PARENT;
 
-        //Make Inactive Items Outside Of PopupWindow
         boolean focusable = true;
 
-        //Create a window with our parameters
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        //Set the location of the window on the screen
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-        //Initialize the elements of our window, install the handler
-        //TextView txtTitle, txtHat, txtFace, txtWetsuit, txtBouyancy;
         TextView txtTitle = popupView.findViewById(R.id.txtTitleDress);
         TextView txtHat = popupView.findViewById(R.id.txtHead);
         TextView txtFace = popupView.findViewById(R.id.txtFace);
@@ -214,12 +204,8 @@ public class DressToSailActivity extends AppCompatActivity {
             popupWindow.dismiss();
         });
 
-
-        //Handler for clicking on the inactive zone of the window
-
         popupView.setOnTouchListener((v, event) -> {
 
-            //Close the window when clicked
             popupWindow.dismiss();
             return true;
         });

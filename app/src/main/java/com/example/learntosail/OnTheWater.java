@@ -23,7 +23,7 @@ public class OnTheWater extends AppCompatActivity {
         ImageButton home2 = findViewById(R.id.btnTopic2Home);
         home2.setOnClickListener(v -> home2());
         Button pointsofsail = findViewById(R.id.btnPointsofSail);
-        pointsofsail.setOnClickListener(v -> showPopup(v, "pointsofsail"));
+        pointsofsail.setOnClickListener(v -> showPopup(v));
     }
     public void goBack2(){
         Intent intent = new Intent(this, HomeScreen.class);
@@ -33,7 +33,7 @@ public class OnTheWater extends AppCompatActivity {
         Intent intent2 = new Intent(this, HomeScreen.class);
         startActivity(intent2);
     }
-    public void showPopup(final View view, String whichButton) {
+    public void showPopup(final View view) {
 
         LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.activity_pop_up_choice, null);
