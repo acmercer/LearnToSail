@@ -150,4 +150,13 @@
     <string name="ques6">Question 6</string>
     <string name="correctans">Correct</string>
     <string name="wrongans">Wrong</string>
+    <string name="checkRudder">Install/ check the rudder and tiller</string>
+    <string name="attachJibHal">Attach jib halyard</string>
+    <string name="runJibSheet">Run jib sheets</string>
+    <string name="raiseJib">Raise jib and cleat the jib halyard</string>
+    <string name="secureTackOuthaul">Secure the mainsails tack and the outhaul</string>
+    <string name="insertSlugs">Insert mainsail slugs into the mast</string>
+    <string name="raiseMain">Raise the mainsail and cleat the main halyard</string>
+    <string name="mistakesMade">mistakes made</string>
+    <string name="tryAgain">Try Again</string>
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".Rigging"
+            android:exported="false" />
+        <activity
             android:name=".TestPointsofsail"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".LearnPointsOfSail"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".LearnBoatParts"
             android:exported="false" />
