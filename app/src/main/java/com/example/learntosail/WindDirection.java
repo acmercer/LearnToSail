@@ -64,17 +64,21 @@ public class WindDirection extends AppCompatActivity {
         switch (v.getId()){
             case R.id.btnOption1:
                 checkAns(1);
+                break;
             case R.id.btnOption2:
                 checkAns(2);
+                break;
             case R.id.btnOption3:
                 checkAns(3);
+                break;
             case R.id.btnOption4:
                 checkAns(4);
+                break;
         }
     }
     private void checkAns(int choice){
         correctAns = questionsWD[quesNo].getCorrectAns();
-        if (choice==correctAns){
+        if (choice == correctAns){
             quesNo++;
             if (quesNo<5){
                 setQues();
@@ -84,29 +88,34 @@ public class WindDirection extends AppCompatActivity {
                 resultCard.setVisibility(View.VISIBLE);
                 mistakesNo.setText((Integer.toString(mistakes)));
             }
+
         }
         else{
             mistakes++;
             switch (choice){
                 case 1:
                     wrong1.setVisibility(View.VISIBLE);
+                    break;
                 case 2:
                     wrong2.setVisibility(View.VISIBLE);
+                    break;
                 case 3:
                     wrong3.setVisibility(View.VISIBLE);
+                    break;
                 case 4:
                     wrong4.setVisibility(View.VISIBLE);
+                    break;
             }
         }
     }
     private void setQues(){
-        wrong1.setVisibility(View.INVISIBLE);
-        wrong2.setVisibility(View.INVISIBLE);
-        wrong3.setVisibility(View.INVISIBLE);
-        wrong4.setVisibility(View.INVISIBLE);
         image1.setImageResource(questionsWD[quesNo].getImage1());
         image2.setImageResource(questionsWD[quesNo].getImage2());
         image3.setImageResource(questionsWD[quesNo].getImage3());
         image4.setImageResource(questionsWD[quesNo].getImage4());
+        wrong1.setVisibility(View.INVISIBLE);
+        wrong2.setVisibility(View.INVISIBLE);
+        wrong3.setVisibility(View.INVISIBLE);
+        wrong4.setVisibility(View.INVISIBLE);
     }
 }
