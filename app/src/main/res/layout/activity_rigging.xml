@@ -11,13 +11,14 @@
         android:id="@+id/txtRiggingTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:fontFamily="@font/arvo_bold"
-        android:text="@string/posTitle"
+        android:text="@string/riggingBoat"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="99dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTopic2Home3" />
 
     <ImageView
         android:id="@+id/imageView22"
@@ -57,4 +58,103 @@
         app:srcCompat="@drawable/ic_baseline_navigate_before_24"
         app:tint="@color/black"
         tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/secureTackOuthaul"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/checkRudder"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRiggingTitle" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/attachJibHal"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/runJibSheet"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/raiseJib"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/raiseMain"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/insertSlugs"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

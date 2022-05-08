@@ -159,4 +159,5 @@
     <string name="raiseMain">Raise the mainsail and cleat the main halyard</string>
     <string name="mistakesMade">mistakes made</string>
     <string name="tryAgain">Try Again</string>
+    <string name="riggingBoat">Order the steps of rigging</string>
 </resources>
